@@ -1,12 +1,11 @@
-import 'package:e_kart/createacc.dart';
-import 'package:e_kart/forgotpassword.dart';
-import 'package:e_kart/splashscreen.dart';
-import 'package:e_kart/userprofile.dart';
+import 'package:e_kart/pages/createacc.dart';
+import 'package:e_kart/pages/forgotpassword.dart';
+import 'package:e_kart/pages/homepage.dart';
+import 'package:e_kart/pages/loginpage.dart';
+import 'package:e_kart/pages/splashscreen.dart';
+import 'package:e_kart/drawer/userprofile.dart';
 import 'package:e_kart/utils/routes.dart';
 import 'package:flutter/material.dart';
-
-import 'homepage.dart';
-import 'loginpage.dart';
 
 void main() {
   runApp(const MyApp());

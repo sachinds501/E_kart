@@ -59,49 +59,77 @@ class _HomePageState extends State<HomePage> {
                     onDetailsPressed: () => Navigator.pushNamed(
                         context, MyRoutes.userprofileRoutes)),
               ),
-              // Divider(color: Colors.black),
+              Divider(
+                color: Colors.black,
+                indent: 10, // empty space to the leading edge of divider.
+                endIndent: 10,
+              ),
               ListTile(
                   leading: Icon(
                     CupertinoIcons.home,
                     color: Colors.orange[700],
                   ),
                   title: Text("Home")),
-              // Divider(color: Colors.black),
+              Divider(
+                color: Colors.black,
+                indent: 10, // empty space to the leading edge of divider.
+                endIndent: 10,
+              ),
               ListTile(
                   leading: Icon(
                     CupertinoIcons.building_2_fill,
                     color: Colors.orange[700],
                   ),
                   title: Text("Malls and Centers")),
-              // Divider(color: Colors.black),
+              Divider(
+                color: Colors.black,
+                indent: 10, // empty space to the leading edge of divider.
+                endIndent: 10,
+              ),
               ListTile(
                   leading: Icon(
                     CupertinoIcons.list_bullet,
                     color: Colors.orange[700],
                   ),
                   title: Text("Payment options")),
-              // Divider(color: Colors.black),
+              Divider(
+                color: Colors.black,
+                indent: 10, // empty space to the leading edge of divider.
+                endIndent: 10,
+              ),
               ListTile(
                   leading: Icon(
                     CupertinoIcons.money_dollar_circle,
                     color: Colors.orange[700],
                   ),
                   title: Text("Payment History")),
-              // Divider(color: Colors.black),
+              Divider(
+                color: Colors.black,
+                indent: 10, // empty space to the leading edge of divider.
+                endIndent: 10,
+              ),
               ListTile(
                   leading: Icon(
                     CupertinoIcons.question_circle,
                     color: Colors.orange[700],
                   ),
                   title: Text("Help")),
-              // Divider(color: Colors.black),
+              Divider(
+                color: Colors.black,
+                indent: 10, // empty space to the leading edge of divider.
+                endIndent: 10,
+              ),
               ListTile(
                   leading: Icon(
                     CupertinoIcons.arrow_left_circle,
                     color: Colors.orange[700],
                   ),
                   title: Text("Logout")),
-              // Divider(color: Colors.black),
+              Divider(
+                color: Colors.black,
+                indent: 10, // empty space to the leading edge of divider.
+                endIndent: 10,
+              ),
             ]),
           ),
         ),
