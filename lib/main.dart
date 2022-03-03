@@ -1,6 +1,7 @@
-import 'package:e_kart/createaccount.dart';
+import 'package:e_kart/createacc.dart';
 import 'package:e_kart/forgotpassword.dart';
 import 'package:e_kart/splashscreen.dart';
+import 'package:e_kart/userprofile.dart';
 import 'package:e_kart/utils/routes.dart';
 import 'package:flutter/material.dart';
 
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
         MyRoutes.forgotpasswordpageRoutes: (context) =>
             const ForgotPasswordPage(),
         MyRoutes.createNewAccountRoutes: (context) => const CreateNewAccount(),
+        MyRoutes.userprofileRoutes: (context) => const UserProfile(),
       },
     );
   }
