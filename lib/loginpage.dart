@@ -9,15 +9,15 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
 
-  get nameController => null;
-
   get email => null;
 
   set _name(String? _name) {}
+  set _password(String? _password) {}
 
   @override
   Widget build(BuildContext context) {
-    var _loginKey;
+    final _loginKey = GlobalKey<FormState>();
+
     return Material(
       color: Colors.white,
       child: SingleChildScrollView(
@@ -87,13 +87,13 @@ class LoginPage extends StatelessWidget {
                         },
                         validator: (value) {
                           if (value!.isEmpty) {
-                            return "Username cannot be empty";
+                            return "Email cannot be empty";
                           }
                           return null;
                         },
                       ),
                       const SizedBox(
-                        height: 20,
+                        height: 5,
                       ),
                       TextFormField(
                           decoration: const InputDecoration(
@@ -107,8 +107,7 @@ class LoginPage extends StatelessWidget {
                             labelText: 'Password',
                           ),
                           onSaved: (value) {
-                            var password;
-                            password.text = value!;
+                            _password = value!;
                           },
                           validator: (value) {
                             if (value!.isEmpty) {
@@ -122,17 +121,18 @@ class LoginPage extends StatelessWidget {
                         height: 5,
                       ),
                       TextButton(
-                        child: Text(
-                          "Forgot Password?",
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 14,
+                          child: Text(
+                            "Forgot Password?",
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 14,
+                            ),
                           ),
-                        ),
-                        onPressed: () => Navigator.pushNamed(
-                            context, MyRoutes.forgotpasswordpageRoutes),
-                      ),
+                          onPressed: () => {
+                                Navigator.pushNamed(
+                                    context, MyRoutes.forgotpasswordpageRoutes),
+                              }),
                       ElevatedButton.icon(
                         style: ElevatedButton.styleFrom(
                             primary: const Color.fromARGB(225, 240, 120, 40),
@@ -144,7 +144,10 @@ class LoginPage extends StatelessWidget {
                         icon:
                             const FaIcon(FontAwesomeIcons.arrowAltCircleRight),
                         onPressed: () {
-                          Navigator.pushNamed(context, MyRoutes.homepageRoutes);
+                          if (_loginKey.currentState!.validate()) {
+                            Navigator.pushNamed(
+                                context, MyRoutes.homepageRoutes);
+                          }
                         },
                         label: const Text(
                           ' Login',
@@ -164,7 +167,7 @@ class LoginPage extends StatelessWidget {
                   alignment: Alignment.centerLeft,
                   child: TextButton(
                     child: Text(
-                      "    Don't have an account? Create it here",
+                      "    Don't have an account? Click here",
                       textAlign: TextAlign.left,
                       style: TextStyle(
                         color: Colors.black,
@@ -172,7 +175,7 @@ class LoginPage extends StatelessWidget {
                       ),
                     ),
                     onPressed: () => Navigator.pushNamed(
-                        context, MyRoutes.forgotpasswordpageRoutes),
+                        context, MyRoutes.createNewAccountRoutes),
                   ),
                 ),
                 Padding(

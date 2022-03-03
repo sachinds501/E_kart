@@ -1,4 +1,4 @@
-import 'package:e_kart/createAccount.dart';
+import 'package:e_kart/createaccount.dart';
 import 'package:e_kart/forgotpassword.dart';
 import 'package:e_kart/splashscreen.dart';
 import 'package:e_kart/utils/routes.dart';
