@@ -37,6 +37,9 @@ dependencies:
   blinking_text: ^1.0.1+2
   flutter_signin_button: ^2.0.0
   convex_bottom_bar: ^3.0.0
+  qr_code_scanner: ^0.7.0
+  path_provider: ^2.0.9
+  qr_flutter: ^4.0.0
 
 dev_dependencies:
   flutter_test:
