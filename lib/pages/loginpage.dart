@@ -81,6 +81,7 @@ class LoginPage extends StatelessWidget {
                           ),
                           labelText: 'Email',
                         ),
+                        enableSuggestions: true,
                         onSaved: (String? value) {
                           _name = value;
                           print('email=$email');
@@ -106,6 +107,8 @@ class LoginPage extends StatelessWidget {
                             ),
                             labelText: 'Password',
                           ),
+                          obscureText: true,
+                          enableSuggestions: true,
                           onSaved: (value) {
                             _password = value!;
                           },
@@ -166,12 +169,22 @@ class LoginPage extends StatelessWidget {
                 Container(
                   alignment: Alignment.centerLeft,
                   child: TextButton(
-                    child: Text(
-                      "    Don't have an account? Click here",
-                      textAlign: TextAlign.left,
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 14,
+                    child: RichText(
+                      text: const TextSpan(
+                        children: <TextSpan>[
+                          TextSpan(
+                              text: "Don't have an account?",
+                              style: TextStyle(
+                                  color: Color.fromARGB(225, 240, 120, 40),
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 30)),
+                          TextSpan(
+                              text: ' Click here',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Color.fromARGB(255, 10, 68, 177),
+                                  fontSize: 30)),
+                        ],
                       ),
                     ),
                     onPressed: () => Navigator.pushNamed(
