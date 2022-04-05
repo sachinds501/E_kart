@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       // theme: lightThemeData(context),
       // darkTheme: darkThemeData(context),
-      initialRoute: MyRoutes.homepageRoutes,
+      initialRoute: MyRoutes.splashscreenRoutes,
       routes: {
         MyRoutes.loginRoutes: (context) => const LoginPage(),
         MyRoutes.splashscreenRoutes: (context) => const SplashScreen(),

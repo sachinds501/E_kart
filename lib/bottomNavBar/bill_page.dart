@@ -1,5 +1,6 @@
 // ignore_for_file: non_constant_identifier_names, avoid_unnecessary_containers, prefer_const_constructors
 
+import 'package:app_settings/app_settings.dart';
 import 'package:flutter/material.dart';
 
 // Adapted from the data table demo in offical flutter gallery:
@@ -12,6 +13,7 @@ class BillPage extends StatefulWidget {
 }
 
 double revenue = 0;
+int flag = 0;
 
 class _BillPageState extends State<BillPage> {
   // GlobalKey is needed to show bottom sheet.
@@ -33,8 +35,15 @@ class _BillPageState extends State<BillPage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
+                      Text(
+                        "Bluetooth :",
+                        style: TextStyle(
+                            fontSize: 15, fontWeight: FontWeight.w800),
+                      ),
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          AppSettings.openBluetoothSettings();
+                        },
                         child: Text("connect",
                             style: TextStyle(
                                 backgroundColor: Colors.grey[300],
@@ -43,7 +52,9 @@ class _BillPageState extends State<BillPage> {
                                 fontSize: 15)),
                       ),
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          flag = 1;
+                        },
                         child: Text("disconnect",
                             style: TextStyle(
                                 backgroundColor: Colors.grey[300],
@@ -88,6 +99,42 @@ class _BillPageState extends State<BillPage> {
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.green,
+                                fontSize: 15)),
+                      ],
+                    ),
+                  ),
+                  RichText(
+                    text: const TextSpan(
+                      children: <TextSpan>[
+                        TextSpan(
+                            text: "Barcode machine status : ",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 15)),
+                        TextSpan(
+                            text: 'connected',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.red,
+                                fontSize: 15)),
+                      ],
+                    ),
+                  ),
+                  RichText(
+                    text: const TextSpan(
+                      children: <TextSpan>[
+                        TextSpan(
+                            text: "Barcode machine ID : ",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 15)),
+                        TextSpan(
+                            text: '314',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.red,
                                 fontSize: 15)),
                       ],
                     ),
@@ -170,7 +217,7 @@ class _BillPageState extends State<BillPage> {
                             fit: BoxFit.scaleDown,
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              'Total Bill Amount : Rs. 9484.87',
+                              'Total Bill Amount : \u{20B9}${9484.87}',
                               style: Theme.of(context)
                                   .textTheme
                                   .headline6!

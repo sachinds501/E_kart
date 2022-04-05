@@ -19,7 +19,7 @@ class _HomePageState extends State<HomePage> {
   final pages = [
     const BillPage(),
     const QRCodePage(),
-    const Page3(),
+    const FindMalls(),
   ];
 
   @override
@@ -112,10 +112,10 @@ class _HomePageState extends State<HomePage> {
               // ),
               ListTile(
                   leading: Icon(
-                    CupertinoIcons.building_2_fill,
+                    Icons.attach_money_outlined,
                     color: Colors.orange[700],
                   ),
-                  title: Text("Malls and Centers")),
+                  title: Text("Reward points")),
               // Divider(
               //   color: Colors.black,
               //   indent: 10, // empty space to the leading edge of divider.

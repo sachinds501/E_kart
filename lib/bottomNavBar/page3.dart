@@ -1,26 +1,40 @@
+// ignore_for_file: unused_field
+
 import 'package:flutter/material.dart';
 
-class Page3 extends StatefulWidget {
-  const Page3({Key? key}) : super(key: key);
+class FindMalls extends StatefulWidget {
+  const FindMalls({Key? key}) : super(key: key);
 
   @override
-  State<Page3> createState() => Page3State();
+  State<FindMalls> createState() => FindMallsState();
 }
 
-class Page3State extends State<Page3> {
+class FindMallsState extends State<FindMalls> {
+  static const menuItems = <String>[
+    'DEPSTAR',
+    'CSPIT',
+    'CMPICA',
+    'PDPICA',
+    'CIPS',
+  ];
+
+  final List<DropdownMenuItem<String>> _dropDownMenuItems1 = menuItems
+      .map(
+        (String value) => DropdownMenuItem<String>(
+          value: value,
+          child: Text(value),
+        ),
+      )
+      .toList();
+
+  String? _btn1SelectedVal;
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white,
-      child: Center(
-        child: Text(
-          "Page Number 3",
-          style: TextStyle(
-            color: Colors.green[900],
-            fontSize: 45,
-            fontWeight: FontWeight.w500,
-          ),
-        ),
+    return const Scaffold(
+      backgroundColor: Colors.white,
+      body: Center(
+        child: Text("Page 3"),
       ),
     );
   }

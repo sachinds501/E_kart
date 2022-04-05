@@ -1,8 +1,10 @@
 // ignore_for_file: unused_local_variable, avoid_print, prefer_typing_uninitialized_variables, must_be_immutable, prefer_const_constructors
 
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:blinking_text/blinking_text.dart';
 import 'package:e_kart/utils/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -54,17 +56,30 @@ class LoginPage extends StatelessWidget {
                     ],
                   ),
                 ),
+                SizedBox(
+                  height: 10,
+                ),
+                SizedBox(
+                  width: 280.0,
+                  child: DefaultTextStyle(
+                    style: GoogleFonts.robotoMono(
+                      textStyle: TextStyle(
+                        fontSize: 12.0,
+                        color: Color.fromARGB(255, 71, 55, 55),
+                      ),
+                    ),
+                    child: AnimatedTextKit(
+                        isRepeatingAnimation: true,
+                        animatedTexts: [
+                          TyperAnimatedText('Make billing more effiecnt,easy',
+                              speed: Duration(milliseconds: 100)),
+                          TyperAnimatedText('and less time consuming',
+                              speed: Duration(milliseconds: 100)),
+                        ]),
+                  ),
+                ),
                 const SizedBox(
                   height: 9,
-                ),
-                const BlinkText(
-                  '*Make billing more effiecnt, easy\n      and less time consuming*',
-                  style: TextStyle(
-                      fontSize: 12.0, color: Color.fromARGB(255, 214, 42, 42)),
-                  endColor: Color.fromARGB(255, 0, 0, 0),
-                ),
-                const SizedBox(
-                  height: 30,
                 ),
                 Container(
                   padding: const EdgeInsets.all(24.0),
@@ -177,13 +192,13 @@ class LoginPage extends StatelessWidget {
                               style: TextStyle(
                                   color: Color.fromARGB(225, 240, 120, 40),
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 30)),
+                                  fontSize: 18)),
                           TextSpan(
                               text: ' Click here',
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Color.fromARGB(255, 10, 68, 177),
-                                  fontSize: 30)),
+                                  fontSize: 18)),
                         ],
                       ),
                     ),

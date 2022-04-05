@@ -1,8 +1,7 @@
-// ignore_for_file: avoid_print, prefer_const_constructors
+// ignore_for_file: avoid_print, prefer_const_constructors, unused_element
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:qrscan/qrscan.dart' as scanner;
 
 class QRCodePage extends StatefulWidget {
   const QRCodePage({Key? key}) : super(key: key);
@@ -13,6 +12,8 @@ class QRCodePage extends StatefulWidget {
 
 class _QRCodePageState extends State<QRCodePage> {
   String result = "Scan generated QR Code to Pay...!";
+
+  get scanner => null;
   Future _scanQR() async {
     try {
       String? cameraScanResult = await scanner.scan();
@@ -67,7 +68,7 @@ class _QRCodePageState extends State<QRCodePage> {
       floatingActionButton: FloatingActionButton.extended(
           icon: Icon(Icons.camera_alt),
           onPressed: () {
-           // _scanQR(); /// calling a function when user click on button
+            // _scanQR(); /// calling a function when user click on button
           },
           label: const Text("Scan")),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
