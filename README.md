@@ -1,3 +1,4 @@
+
 # E_kart
 
 - Digitalize the way offline shopping. 
@@ -12,6 +13,7 @@
 - Login Page for users
 - **Home Screen** - Bill Details, display the items you putted into the cart.
 - **Scan and Pay** - user can scan and pay directly, by the QR code attached with the cart.
+- **Find Our Malls and Centers**
 
 # Frontend
  - Flutter dart
