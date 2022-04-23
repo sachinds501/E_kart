@@ -1,16 +1,24 @@
-# e_kart
 
-A new Flutter project.
+# E_kart
 
-## Getting Started
+- Digitalize the way offline shopping. 
+- Easy billing system.
+- No need of standing in the long queue in mall and center.
+- Pay your bill through mobile.
+- Get display the items you had added to the cart
 
-This project is a starting point for a Flutter application.
+# What is inside
 
-A few resources to get you started if this is your first Flutter project:
+**Currently only UI design is prepared.**
+- Login Page for users
+- **Home Screen** - Bill Details, display the items you putted into the cart.
+- **Scan and Pay** - user can scan and pay directly, by the QR code attached with the cart.
+- **Find Our Malls and Centers**
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+# Frontend
+ - Flutter dart
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Prototype Photos and video.
+
+[link](https://drive.google.com/drive/folders/1n6_nlaJb0EyyF8tI-YJun4zpdmaLXurS?usp=sharing)
+
